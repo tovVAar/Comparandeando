@@ -12,9 +12,6 @@ html.no-js
     meta(name="description", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     // Place favicon.ico and apple-touch-icon.png in the root directory
-    
-
-   
     // build:css(.tmp) styles/main.css 
     //link(rel="stylesheet", href="styles/bootstrap.css")
     //link(rel="stylesheet", href="styles/main.css")
@@ -48,12 +45,12 @@ html.no-js
           a(class="brand", href="#") Comparandeando
           div(class="nav-collapse collapse")
             ul(class="nav")
-              li(class="active")
-                a(href="#") Inicio
-              li
-                a(href="/about") Sobre Comparandeando
-              li
-                a(href="#contact") Contacto
+              li#productsLI
+                a(href="#/products") Productos
+              li#userLI
+                a(href="#/users") Usuarios
+              li#aboutLI
+                a(href="#/about") Comparandeando?
 
     // Add your site or application content here
     div(class="container", ng-view)
@@ -97,6 +94,8 @@ html.no-js
     script(src="scripts/controllers/main.js")
     script(src="scripts/controllers/product.js")
     script(src="scripts/controllers/about.js")
+    script(src="scripts/controllers/products.js")
+    script(src="scripts/controllers/users.js")
     // endbuild
     //- build:body
     

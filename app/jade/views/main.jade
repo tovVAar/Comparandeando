@@ -4,8 +4,12 @@
     input 
     button Add
   ul
-      li Jade
-      li(ng-repeat="thing in awesomeThings") {{thing}}
-  p installed.
-  h3 Enjoy coding! - Yeoman
-  p {{algo}}
+      li(ng-repeat="product in getProduct") 
+        pre {{ product }}
+        p Nombre: {{product.name}}
+        p Descripcion: {{product.description}}
+        p Precio: {{product.price}}     
+  
+
+  pre {{getProduct}}
+ 

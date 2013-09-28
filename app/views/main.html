@@ -6,10 +6,12 @@
     <button>Add</button>
   </form>
   <ul>
-    <li>Jade</li>
-    <li ng-repeat="thing in awesomeThings">{{thing}}</li>
+    <li ng-repeat="product in getProduct"> 
+      <pre>{{ product }}</pre>
+      <p>Nombre: {{product.name}}</p>
+      <p>Descripcion: {{product.description}}</p>
+      <p>Precio: {{product.price}}     </p>
+    </li>
   </ul>
-  <p>installed.</p>
-  <h3>Enjoy coding! - Yeoman</h3>
-  <p>{{algo}}</p>
+  <pre>{{getProduct}}</pre>
 </div>
