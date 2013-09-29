@@ -17,9 +17,23 @@ exports.awesomeThings = function(req, res) {
         'Karma'
     ]);
 };
-//Get a product
-exports.getProduct = function(req, res){
+
+//Get all products
+exports.getAllProducts = function(req, res, next){
   Product.find(gotProducts);
+  function gotProducts (err, productos) {
+    if (err) {
+      console.log(err)
+      return next()
+    }
+    return res.json(productos);
+  }
+}
+
+//Get a product
+exports.getProduct = function(req, res, next){
+  var id=req.params.id;
+  Product.findById(id, gotProducts);
   function gotProducts (err, productos) {
     if (err) {
       console.log(err)
@@ -30,7 +44,7 @@ exports.getProduct = function(req, res){
   }    
 };
 
-//Update a product
+
 exports.setProduct = function(req, res){
     res.send('setProduct');
 };

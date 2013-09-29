@@ -19,6 +19,10 @@ angular.module('ComparandeandoApp', [])
         templateUrl: 'views/users.html',
         controller: 'UsersCtrl'
       })
+      .when('/places', {
+        templateUrl: 'views/places.html',
+        controller: 'PlacesCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

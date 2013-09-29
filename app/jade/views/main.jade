@@ -1,15 +1,14 @@
-.hero-unit
-  h1 Add a Product!
-  form(name="newProduct")
-    input 
-    button Add
-  ul
-      li(ng-repeat="product in getProduct") 
-        pre {{ product }}
-        p Nombre: {{product.name}}
-        p Descripcion: {{product.description}}
-        p Precio: {{product.price}}     
-  
-
-  pre {{getProduct}}
- 
+div(class="row-fluid heading")
+  .span12 
+    h1 Comparandeando
+div(class="row-fluid subheading")
+  .span12 
+    p.lead Compra, vende, intercambia, sin intermediarios ni comisiones
+div(class="row-fluid section1")
+  div(class="span5 offset1")
+    a(href="#/places", class="btn btn-block btn-large btn-warning") Lugares
+  .span5
+    a(href="#/users", class="btn btn-success btn-block btn-large") Usuarios
+div(class="row-fluid section2")
+  div(class="span6 offset3")
+    a(href="#/products", class="btn btn-primary btn-large btn-block") Productos

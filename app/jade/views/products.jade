@@ -1,4 +1,59 @@
-p This is the products view.
-ul
-  li(ng-repeat="thing in awesomeThings")
-    Soy {{thing}}
+.row-fluid
+    legend
+        h2 Productos
+.row-fluid
+    .span10
+        p.muted
+            |Cantidad de productos: {{products.length}}
+    .span2
+        br
+        a(class="btn-success btn-large", href='#/addUser')
+            i(class="icon-plus icon-white")
+            |&nbsp; Usuario
+
+//Busqueda simple
+.row
+    .input-prepend(ng-hide='avanzada')
+        span.add-on
+            i.icon-search
+        input(type="text",class="input-xlarge",ng-model="query", placeholder="Buscar" )
+
+
+//br
+//
+//.row-fluid
+// pre
+// |avanzada = {{avanzada}}
+// |simple = {{simple}}
+// |simpletxt = {{query}}
+
+br
+.row
+    table#tableUser(class="table table-hover", cellpaddin="0", cellspacing="0")
+        thead
+            th
+                strong Producto
+            th
+                strong Descripcion
+            th
+                strong Locacion
+            th
+                strong Vendedor
+            th
+                strong Precio
+            th
+                strong Disponibles
+        tbody
+            tr(ng-repeat='product in products | filter:query')
+                td {{product.name}}
+                td {{product.description}}
+                td {{product.location}}
+                td {{product.user}}
+                td {{product.price}}
+                td {{product.stock}}
+                td
+                    a(class="btn btn-warning", href="#/product_edit/{{product._id}}")
+                        i(class="icon-pencil icon-white")
+                td
+                    a(class="btn btn-danger",bs-popover="/partials/deleteUser",data-title="{{product.name}}",data-placement="left")
+                        i(class="icon-remove-circle icon-white")

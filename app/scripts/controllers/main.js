@@ -21,5 +21,8 @@ angular.module('ComparandeandoApp')
     $http.get('/api/product_new').success(function(product) {
       $scope.createProduct = product;
     });
-
+    //Show a product
+    $http.get('/api/all_products/a').success(function(product){
+      $scope.showProduct = product;
+    })
   });
