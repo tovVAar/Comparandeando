@@ -11,29 +11,27 @@ html
     title Comparandeando
     meta(name="description", content="")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="styles/font-awesome.css")
-    link(rel="stylesheet", href="styles/social-buttons.css")
-    link(rel="stylesheet", href="styles/bootstrapSE.css")
-    link(rel="stylesheet", href="styles/ubuntu.css")
-    link(rel="stylesheet", href="styles/open-sans.css")
+    //    link(rel="stylesheet", href="styles/font-awesome.css")
+    //    link(rel="stylesheet", href="styles/social-buttons.css")
+    //link(rel="stylesheet", href="styles/bootstrapSE.css")
+    //    link(rel="stylesheet", href="styles/ubuntu.css")
+    //    link(rel="stylesheet", href="styles/open-sans.css")
+    link(rel="stylesheet", href="styles/bootstrap.min.css")
     link(rel="stylesheet", href="styles/custom.css")
-    link(rel="stylesheet", href="bootstrap-responsive.css") 
-//    //link(rel="stylesheet", href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css")
-    //link( rel="stylesheet", href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css")
-    //link(rel="stylesheet", href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css")    
-    script(src="scripts/jquerySE.js")
-    script(src="scripts/bootstrapSE.js")
+    link(rel="stylesheet", href="styles/bootstrap-responsive.css") 
+
     
   body(ng-app="ComparandeandoApp")
 
     div(class="navbar navbar-inverse navbar-fixed-top")
       div(class="navbar-inner")
-        div(class="container")
+        div(class="container-fluid")
           button(type="button", class="btn btn-navbar", data-toggle="collapse", data-target=".nav-collapse")
             span(class="icon-bar")
             span(class="icon-bar")
             span(class="icon-bar")
           a(class="brand", href="#") Comparandeando
+          p(class="navbar-text pull-right") Usuario
           div(class="nav-collapse collapse")
             ul(class="nav")
               li#productsLI
@@ -43,7 +41,7 @@ html
               li#placesLI
                 a(href="#/places") Lugares
               li#aboutLI
-                a(href="#/about") Comparandeando?
+                a(href="#/about") &#191;Comparandeando?
 
     // Add your site or application content here
     div(class="container", ng-view)
@@ -64,7 +62,7 @@ html
 
     script(src="bower_components/jquery/jquery.js")
     script(src="bower_components/angular/angular.js")
-
+    script(src="styles/bootstrap.min.js")
     
     //build:js scripts/plugins.js 
     script(src="bower_components/bootstrap-sass/js/bootstrap-affix.js")

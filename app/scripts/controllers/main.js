@@ -2,6 +2,7 @@
 
 angular.module('ComparandeandoApp')
   .controller('MainCtrl', function ($scope, $http) {
+/*
     $http.get('/api/awesomeThings').success(function(awesomeThings) {
       $scope.awesomeThings = awesomeThings;
     });
@@ -24,5 +25,6 @@ angular.module('ComparandeandoApp')
     //Show a product
     $http.get('/api/all_products/a').success(function(product){
       $scope.showProduct = product;
-    })
+    });
+*/
   });

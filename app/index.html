@@ -11,76 +11,75 @@
     <title>Comparandeando</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/font-awesome.css">
-    <link rel="stylesheet" href="styles/social-buttons.css">
-    <link rel="stylesheet" href="styles/bootstrapSE.css">
-    <link rel="stylesheet" href="styles/ubuntu.css">
-    <link rel="stylesheet" href="styles/open-sans.css">
+    <!--    link(rel="stylesheet", href="styles/font-awesome.css")-->
+    <!--    link(rel="stylesheet", href="styles/social-buttons.css")-->
+    <!--link(rel="stylesheet", href="styles/bootstrapSE.css")-->
+    <!--    link(rel="stylesheet", href="styles/ubuntu.css")-->
+    <!--    link(rel="stylesheet", href="styles/open-sans.css")-->
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/custom.css">
-    <link rel="stylesheet" href="bootstrap-responsive.css">
+    <link rel="stylesheet" href="styles/bootstrap-responsive.css">
   </head>
-</html><!--    //link(rel="stylesheet", href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap-combined.no-icons.min.css")
-<!--link( rel="stylesheet", href="http://netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css")-->
-<!--link(rel="stylesheet", href="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fsocial-buttons.css")    -->
-<script src="scripts/jquerySE.js"></script>
-<script src="scripts/bootstrapSE.js"></script>-->
-<body ng-app="ComparandeandoApp">
-  <div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-      <div class="container">
-        <button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="brand">Comparandeando</a>
-        <div class="nav-collapse collapse">
-          <ul class="nav">
-            <li id="productsLI"><a href="#/products">Productos</a></li>
-            <li id="userLI"><a href="#/users">Usuarios</a></li>
-            <li id="placesLI"><a href="#/places">Lugares</a></li>
-            <li id="aboutLI"><a href="#/about">Comparandeando?</a></li>
-          </ul>
+  <body ng-app="ComparandeandoApp">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" data-toggle="collapse" data-target=".nav-collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="#" class="brand">Comparandeando</a>
+          <p class="navbar-text pull-right">Usuario</p>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li id="productsLI"><a href="#/products">Productos</a></li>
+              <li id="userLI"><a href="#/users">Usuarios</a></li>
+              <li id="placesLI"><a href="#/places">Lugares</a></li>
+              <li id="aboutLI"><a href="#/about">&#191;Comparandeando?</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <!-- Add your site or application content here-->
-  <div ng-view class="container"></div>
-  <div class="row-fluid footer">
-    <div class="span12">
-      <p>Erick Jose Antonio Tovar Marmolejo</p>
-      <p> <a href="mailto:tovar.eri@gmail.com">tovar.eri@gmail.com</a></p>
+    <!-- Add your site or application content here-->
+    <div ng-view class="container"></div>
+    <div class="row-fluid footer">
+      <div class="span12">
+        <p>Erick Jose Antonio Tovar Marmolejo</p>
+        <p> <a href="mailto:tovar.eri@gmail.com">tovar.eri@gmail.com</a></p>
+      </div>
     </div>
-  </div>
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
-  <script>
-    var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-    (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-    g.src='//www.google-analytics.com/ga.js';
-    s.parentNode.insertBefore(g,s)}(document,'script'));
-    
-    
-  </script>
-  <script src="bower_components/jquery/jquery.js"></script>
-  <script src="bower_components/angular/angular.js"></script>
-  <!--build:js scripts/plugins.js -->
-  <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-alert.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-dropdown.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-tooltip.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-modal.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-transition.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-button.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-popover.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-typeahead.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-carousel.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
-  <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
-  <!-- endbuild-->
-  <!-- build:js({.tmp,app}) scripts/scripts.js -->
-  <script src="scripts/app.js"></script>
-  <script src="scripts/controllers/main.js"></script>
-  <script src="scripts/controllers/product.js"></script>
-  <script src="scripts/controllers/about.js"></script>
-  <script src="scripts/controllers/products.js"></script>
-  <script src="scripts/controllers/users.js"></script>
-  <script src="scripts/controllers/places.js"></script>
-  <!-- endbuild-->
-</body>
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID.-->
+    <script>
+      var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+      g.src='//www.google-analytics.com/ga.js';
+      s.parentNode.insertBefore(g,s)}(document,'script'));
+      
+      
+    </script>
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="styles/bootstrap.min.js"></script>
+    <!--build:js scripts/plugins.js -->
+    <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-alert.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-modal.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-transition.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-button.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-popover.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-typeahead.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-carousel.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
+    <!-- endbuild-->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/product.js"></script>
+    <script src="scripts/controllers/about.js"></script>
+    <script src="scripts/controllers/products.js"></script>
+    <script src="scripts/controllers/users.js"></script>
+    <script src="scripts/controllers/places.js"></script>
+    <!-- endbuild-->
+  </body>
+</html>

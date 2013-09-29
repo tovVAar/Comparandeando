@@ -23,7 +23,7 @@ exports.getAllProducts = function(req, res, next){
   Product.find(gotProducts);
   function gotProducts (err, productos) {
     if (err) {
-      console.log(err)
+      console.log('Error in getAllProducts'+err)
       return next()
     }
     return res.json(productos);
@@ -36,7 +36,7 @@ exports.getProduct = function(req, res, next){
   Product.findById(id, gotProducts);
   function gotProducts (err, productos) {
     if (err) {
-      console.log(err)
+      console.log('Error in getProduct: '+err)
       return next()
     }
 
