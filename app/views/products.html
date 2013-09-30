@@ -8,22 +8,17 @@
   <div class="span10">
     <p class="muted">Cantidad de productos: {{products.length}}</p>
   </div>
-  <div class="span2"><br/><a href="#/addUser" class="btn-success btn-large"><i class="icon-plus icon-white"></i>&nbsp; Usuario</a></div>
-</div>
+  <div class="span2">
+    <!--br--><a href="#/addProduct" class="btn-success btn-large"><i class="icon-plus icon-white"></i>&nbsp; Usuario</a>
+  </div>
+</div><br/>
 <!--Busqueda simple-->
-<div class="row">
+<div class="row-fluid">
   <div ng-hide="avanzada" class="input-prepend"><span class="add-on"><i class="icon-search"></i></span>
     <input type="text" ng-model="query" placeholder="Buscar" class="input-xlarge"/>
   </div>
-</div>
-<!--br-->
-<!---->
-<!--.row-fluid-->
-<!-- pre-->
-<!-- |avanzada = {{avanzada}}-->
-<!-- |simple = {{simple}}-->
-<!-- |simpletxt = {{query}}--><br/>
-<div class="row">
+</div><br/>
+<div class="row-fluid">
   <table id="tableUser" cellpaddin="0" cellspacing="0" class="table table-hover">
     <thead>
       <th><strong>Producto</strong></th>
@@ -39,7 +34,7 @@
         <td>{{product.description}}</td>
         <td>{{product.location}}</td>
         <td>{{product.user}}</td>
-        <td>{{product.price}}</td>
+        <td>{{product.price | currency}}</td>
         <td>{{product.stock}}</td>
         <td><a href="#/product_edit/{{product._id}}" class="btn btn-warning"><i class="icon-pencil icon-white"></i></a></td>
         <td><a bs-popover="/partials/deleteUser" data-title="{{product.name}}" data-placement="left" class="btn btn-danger"><i class="icon-remove-circle icon-white"></i></a></td>

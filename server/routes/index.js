@@ -6,7 +6,8 @@ var mongoose = require('mongoose'),
     db       = mongoose.createConnection(db_link);
 
 var product_schema = require('models/product')
-   ,Product = db.model('Product', product_schema);
+   ,Product = db.model('Product', product_schema)
+   ,ObjectId=mongoose.Types.ObjectId;
 
 
 //Demo function
@@ -56,7 +57,22 @@ exports.removeProduct = function(req, res){
 };
 
 //Create a product
-exports.newProduct = function(req, res){
-    res.send('newProduct');
+exports.newProduct = function(req, res, next){
+//    var nombre = req.body.name || 'mamas';
+
+    var prod = new Product(req.body);
+    //console.log('Dato '+prod);
+    prod.save(onSaved);
+//    res.redirect('#/products');
+    function onSaved(err){
+      if(err){
+        console.log('Error grabando nuevo producto: '+err);
+        return next(err);
+      }
+      else{
+        return res.redirect('#/products');
+      }
+    }
+   
 };
 

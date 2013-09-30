@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 f9bf9a09bac1c6a27293b00af3c341581bea22b9 Tovar-Erick <sephiroth_eri@hotmail.com> 1379284336 -0700	clone: from git@github.com:Tovar-Erick/Comparandeando.git
+f9bf9a09bac1c6a27293b00af3c341581bea22b9 d6306eacf1235630c4e5e789f722c76f77c7e247 Tovar-Erick <sephiroth_eri@hotmail.com> 1379284757 -0700	commit: Estructura generada con yeoman angularexpress
+d6306eacf1235630c4e5e789f722c76f77c7e247 7a7e42088b6be2a97680bf7dde3bfbe1833976f1 Tovar-Erick <sephiroth_eri@hotmail.com> 1379298191 -0500	commit: Agregados estilos personalizados y librerias para mongoose
+7a7e42088b6be2a97680bf7dde3bfbe1833976f1 c9f4edcb8dce4608a04d43fc54e607ff925e0736 Tovar-Erick <sephiroth_eri@hotmail.com> 1379884722 -0500	commit: Agregadas las respuestas de la API
+c9f4edcb8dce4608a04d43fc54e607ff925e0736 e2fa49effc360d0d53f7f64688484ad8f1267112 Tovar-Erick <sephiroth_eri@hotmail.com> 1380336575 -0500	commit: Rutas principales establecidas con controladores listos. Agregadas funciones principales para la API/products
+e2fa49effc360d0d53f7f64688484ad8f1267112 d518d0dc4348c62ed9a5ea578719e7e71323c104 Tovar-Erick <sephiroth_eri@hotmail.com> 1380434845 -0500	commit: PAntalla principal y index de cada modulo generados
+d518d0dc4348c62ed9a5ea578719e7e71323c104 0bfd7374080420c040301172e1da9b9aa02a6b68 Tovar-Erick <sephiroth_eri@hotmail.com> 1380441110 -0500	commit: Solucionado el aspecto del disenho responsivo, media querys funcionando

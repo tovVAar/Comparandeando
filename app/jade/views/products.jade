@@ -6,29 +6,20 @@
         p.muted
             |Cantidad de productos: {{products.length}}
     .span2
-        br
-        a(class="btn-success btn-large", href='#/addUser')
+        //br
+        a(class="btn-success btn-large", href='#/addProduct')
             i(class="icon-plus icon-white")
             |&nbsp; Usuario
-
+br
 //Busqueda simple
-.row
+.row-fluid
     .input-prepend(ng-hide='avanzada')
         span.add-on
             i.icon-search
         input(type="text",class="input-xlarge",ng-model="query", placeholder="Buscar" )
 
-
-//br
-//
-//.row-fluid
-// pre
-// |avanzada = {{avanzada}}
-// |simple = {{simple}}
-// |simpletxt = {{query}}
-
 br
-.row
+.row-fluid
     table#tableUser(class="table table-hover", cellpaddin="0", cellspacing="0")
         thead
             th
@@ -49,7 +40,7 @@ br
                 td {{product.description}}
                 td {{product.location}}
                 td {{product.user}}
-                td {{product.price}}
+                td {{product.price | currency}}
                 td {{product.stock}}
                 td
                     a(class="btn btn-warning", href="#/product_edit/{{product._id}}")
