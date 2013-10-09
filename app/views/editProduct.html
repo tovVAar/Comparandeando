@@ -1,0 +1,66 @@
+
+<form name="form" class="form-horizontal">
+  <fieldset>
+    <legend>Detalles de producto</legend>
+    <div class="control-group">
+      <label for="name" class="control-label">Nombre del producto</label>
+      <div class="controls">
+        <input id="name" type="text" size="30" name="name" ng-model="formProduct.name" required="required" class="xlarge"/>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="description" class="control-label">Descripcion el producto</label>
+      <div class="controls">
+        <textarea id="name" type="text" rows="3" name="description" ng-model="formProduct.description" required="required"></textarea>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="user" class="control-label">Usuario</label>
+      <div class="controls">
+        <div class="input-prepend"><span class="add-on"><i class="icon-user"></i></span>
+          <input id="user" type="text" size="30" name="user" ng-model="formProduct.user" required="required" class="xlarge"/>
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="location" class="control-label">Ubicacion del producto</label>
+      <div class="controls">
+        <div class="input-prepend"><span class="add-on"><i class="icon-globe"></i></span>
+          <input id="location" type="text" size="30" name="location" ng-model="formProduct.location" required="required" class="xlarge"/>
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="stock" class="control-label">Productos disponibles</label>
+      <div class="controls">
+        <div class="input-prepend"><span class="add-on"><i class="icon-shopping-cart"></i></span>
+          <input id="stock" type="number" size="30" name="stock" ng-model="formProduct.stock" required="required" class="xlarge"/>
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="price" class="control-label">Precio</label>
+      <div class="controls">
+        <div class="input-prepend"><span class="add-on">$</span>
+          <input id="price" type="number" size="30" name="price" ng-model="formProduct.price" required="required" class="xlarge"/>
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <button ng-click="saveProduct()" class="btn-success">Guardar</button>
+        <!--button(class="btn-warning",onclick="location.href='#/products'") Cancelar-->
+      </div>
+    </div>
+  </fieldset>
+</form>
+<pre>{{formProduct | json}}</pre>
+<style type="text/css">
+  .form-horizontal input.ng-invalid.ng-dirty {
+      background-color: #FA787E;
+  }
+  
+  .form-horizontal input.ng-valid.ng-dirty {
+      background-color: #a3c9fa;
+  }
+</style>

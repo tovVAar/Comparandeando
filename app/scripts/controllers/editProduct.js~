@@ -1,0 +1,13 @@
+'use strict';
+
+angular.module('ComparandeandoApp')
+  .controller('EditproductCtrl', function ($scope, $http, $routeParams) {
+    $http.get('/api/awesomeThings').success(function(awesomeThings) {
+      $scope.awesomeThings = awesomeThings;
+    });
+    $http.get('/api/product/'+$routeParams.id).success(function(product) {
+      $scope.product=product;
+    });
+
+
+  });

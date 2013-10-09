@@ -27,6 +27,14 @@ angular.module('ComparandeandoApp', [])
         templateUrl: 'views/addProduct.html',
         controller: 'AddproductCtrl'
       })
+      .when('/editProduct/:id', {
+        templateUrl: 'views/editProduct.html',
+        controller: 'EditproductCtrl'
+      })
+      .when('/addPlace', {
+        templateUrl: 'views/addPlace.html',
+        controller: 'AddplaceCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

@@ -1,0 +1,47 @@
+form.form-horizontal(name="form")
+    fieldset
+        legend Nuevo lugar
+        .control-group
+            label.control-label(for="name") Nombre del lugar
+            .controls
+                input#name.xlarge(type="text", size="30", name="name",ng-model='formPlace.name',required)
+
+        .control-group
+            label.control-label(for="types") Tipo de lugar
+            .controls
+                input#types(type="text", rows="3", name="types",ng-model='formPlace.types',required)
+                 
+        .control-group
+            label.control-label(for="lat") Latitud
+            .controls
+                .input-prepend
+                    //span.add-on
+                       // i.icon-user
+                    input#lat.xlarge(type="text", size="30", name="lat",ng-model='formPlace.location.lat',required)
+
+        .control-group
+            label.control-label(for="location") Longitud
+            .controls
+                .input-prepend
+                    //span.add-on
+                      //  i.icon-globe
+                    input#lng.xlarge(type="text", size="30", name="lng",ng-model='formPlace.location.lng',required)
+        
+        .control-group
+            .controls
+                button(class="btn-success", ng-click='{{submitPlace()}}') Agregar
+                //button(class="btn-warning",onclick="location.href='#/products'") Cancelar
+
+
+
+pre
+    {{formPlace | json}} y {{yo}} and {{key}}
+
+style(type="text/css")
+    .form-horizontal input.ng-invalid.ng-dirty {
+        background-color: #FA787E;
+    }
+
+    .form-horizontal input.ng-valid.ng-dirty {
+        background-color: #a3c9fa;
+    }

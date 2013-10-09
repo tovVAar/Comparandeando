@@ -1,0 +1,20 @@
+'use strict';
+
+angular.module('ComparandeandoApp')
+  .controller('AddplaceCtrl', function ($scope, $http) {
+    $scope.yo = 'si';
+    var key = 'AIzaSyDBt7Sd_I_jVbWHpd6Wfqdloyv7Jc6dn0U';
+    $scope.submitPlace = function(){
+      if($scope.form.$valid){
+        console.log('Haciendo algo');
+        $http.post('https://maps.googleapis.com/maps/api/place/add/json?sensor=true&key='+key, $scope.formPlace)
+          .success(function(data){
+            alert('Agregado con exito! =)');
+            //$http.get('#/products');
+          }).error(function(data){alert('Ocurrio un problema al agregar =(')})
+        }
+      else{console.log('No estoy listo');
+          }
+      }
+
+  });

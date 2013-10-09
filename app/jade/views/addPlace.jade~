@@ -1,0 +1,64 @@
+p This is the addPlace view.form.form-horizontal(name="form")
+    fieldset
+        legend Nuevo producto
+
+        .control-group
+            label.control-label(for="name") Nombre del producto
+            .controls
+                input#name.xlarge(type="text", size="30", name="name",ng-model='formProduct.name',required)
+
+        .control-group
+            label.control-label(for="description") Descripcion el producto
+            .controls
+                textarea#name(type="text", rows="3", name="description",ng-model='formProduct.description',required)
+                 
+        .control-group
+            label.control-label(for="user") Usuario
+            .controls
+                .input-prepend
+                    span.add-on
+                        i.icon-user
+                    input#user.xlarge(type="text", size="30", name="user",ng-model='formProduct.user',required)
+
+        .control-group
+            label.control-label(for="location") Ubicacion del producto
+            .controls
+                .input-prepend
+                    span.add-on
+                        i.icon-globe
+                    input#location.xlarge(type="text", size="30", name="location",ng-model='formProduct.location',required)
+
+        .control-group
+            label.control-label(for="stock") Productos disponibles
+            .controls
+                .input-prepend
+                    span.add-on
+                        i.icon-shopping-cart
+                    input#stock.xlarge(type="number", size="30", name="stock",ng-model='formProduct.stock',required)
+
+        .control-group
+            label.control-label(for="price") Precio
+            .controls
+                .input-prepend
+                    span.add-on
+                        | $
+                    input#price.xlarge(type="number", size="30", name="price" ,ng-model='formProduct.price',required)
+        
+        .control-group
+            .controls
+                button(class="btn-success", ng-click='submitProduct()') Agregar
+                //button(class="btn-warning",onclick="location.href='#/products'") Cancelar
+
+
+
+pre
+    {{formProduct | json}}
+
+style(type="text/css")
+    .form-horizontal input.ng-invalid.ng-dirty {
+        background-color: #FA787E;
+    }
+
+    .form-horizontal input.ng-valid.ng-dirty {
+        background-color: #a3c9fa;
+    }

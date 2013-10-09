@@ -1,0 +1,52 @@
+
+<form name="form" class="form-horizontal">
+  <fieldset>
+    <legend>Nuevo lugar</legend>
+    <div class="control-group">
+      <label for="name" class="control-label">Nombre del lugar</label>
+      <div class="controls">
+        <input id="name" type="text" size="30" name="name" ng-model="formPlace.name" required="required" class="xlarge"/>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="types" class="control-label">Tipo de lugar</label>
+      <div class="controls">
+        <input id="types" type="text" rows="3" name="types" ng-model="formPlace.types" required="required"/>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="lat" class="control-label">Latitud</label>
+      <div class="controls">
+        <div class="input-prepend"><!--span.add-on
+          <!-- i.icon-user-->-->
+          <input id="lat" type="text" size="30" name="lat" ng-model="formPlace.location.lat" required="required" class="xlarge"/>
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <label for="location" class="control-label">Longitud</label>
+      <div class="controls">
+        <div class="input-prepend"><!--span.add-on
+          <!--  i.icon-globe-->-->
+          <input id="lng" type="text" size="30" name="lng" ng-model="formPlace.location.lng" required="required" class="xlarge"/>
+        </div>
+      </div>
+    </div>
+    <div class="control-group">
+      <div class="controls">
+        <button ng-click="{{submitPlace()}}" class="btn-success">Agregar</button>
+        <!--button(class="btn-warning",onclick="location.href='#/products'") Cancelar-->
+      </div>
+    </div>
+  </fieldset>
+</form>
+<pre>{{formPlace | json}} y {{yo}} and {{key}}</pre>
+<style type="text/css">
+  .form-horizontal input.ng-invalid.ng-dirty {
+      background-color: #FA787E;
+  }
+  
+  .form-horizontal input.ng-valid.ng-dirty {
+      background-color: #a3c9fa;
+  }
+</style>

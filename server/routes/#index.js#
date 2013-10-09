@@ -224,7 +224,7 @@ exports.newProduct = function(req, res, next){
    
 };
 
-//Create a product                                                                                                                          
+//Create a place                                                                                                                          
 exports.newPlace = function(req, res, next){
 //  var nombre = req.body.name || 'mamas';                                                                                                    
     var prod = new Product(req.body);

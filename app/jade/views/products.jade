@@ -6,10 +6,10 @@
         p.muted
             |Cantidad de productos: {{products.length}}
     .span2
-        //br
+        br
         a(class="btn-success btn-large", href='#/addProduct')
             i(class="icon-plus icon-white")
-            |&nbsp; Usuario
+            |&nbsp; Producto
 br
 //Busqueda simple
 .row-fluid
@@ -20,7 +20,7 @@ br
 
 br
 .row-fluid
-    table#tableUser(class="table table-hover", cellpaddin="0", cellspacing="0")
+    table#tableProducts(class="table table-hover", cellpaddin="0", cellspacing="0")
         thead
             th
                 strong Producto
@@ -43,8 +43,9 @@ br
                 td {{product.price | currency}}
                 td {{product.stock}}
                 td
-                    a(class="btn btn-warning", href="#/product_edit/{{product._id}}")
+                    a(class="btn btn-warning", href="#/editProduct/{{product._id}}")
                         i(class="icon-pencil icon-white")
                 td
-                    a(class="btn btn-danger",bs-popover="/partials/deleteUser",data-title="{{product.name}}",data-placement="left")
+                    a(class="btn btn-danger", ng-mouseup='{{deleteProduct(product._id)}}', ng-init='')
                         i(class="icon-remove-circle icon-white")
+  
