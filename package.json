@@ -4,7 +4,7 @@
   "dependencies": {
     "jade":"*" ,
     "mongodb":">=0.9.6-7",
-    "mongoose"    : "2.5.10"
+    "mongoose"    : "5.7.6"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
